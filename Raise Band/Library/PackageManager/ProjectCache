@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638000545726988629
-    m_Hash: 2989432480
+      ticks: 638002245038640212
+    m_Hash: 1210271494
   m_LockFileStatus:
     m_FilePath: C:/Users/bdk06/Documents/GitHub/2022Game/Raise Band/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638000545934222577
-    m_Hash: 1323924065
+      ticks: 638002245038650211
+    m_Hash: 2425293117
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
