@@ -14,12 +14,12 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            transform.Translate(-20, 0, 0);
+            transform.Translate(-50, 0, 0);
         }
 
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-            transform.Translate(20, 0, 0);
+            transform.Translate(50, 0, 0);
         }
 
         // 카메라 영역 밖 제한
