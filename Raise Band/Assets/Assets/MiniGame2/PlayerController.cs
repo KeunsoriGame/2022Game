@@ -12,17 +12,30 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
-        {
-            transform.Translate(-50, 0, 0);
-        }
-
-        if (Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            transform.Translate(50, 0, 0);
-        }
+        
 
         // 카메라 영역 밖 제한
 
+    }
+
+    public void LBottonDown()
+    {
+        transform.Translate(-50, 0, 0);
+    }
+
+    public void RBottonDown()
+    {
+        transform.Translate(50, 0, 0);
+    }
+
+    public void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "obstacle")
+        {
+            other.gameObject.SetActive(false);
+
+            Debug.Log("충돌");
+            Destroy(other.gameObject);
+        }
     }
 }

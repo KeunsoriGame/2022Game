@@ -11,8 +11,7 @@ public class ObstacleGenerator : MonoBehaviour
 
     void Start()
     {
-        GameObject newObs = Instantiate(obstaclePrefeb, transform.position, transform.rotation) as GameObject;
-        newObs.transform.SetParent(GameObject.FindGameObjectWithTag("obs").transform, false);
+ 
     }
 
     // Update is called once per frame
@@ -27,9 +26,6 @@ public class ObstacleGenerator : MonoBehaviour
             int px = Random.Range(-960, 960);
             GameObject newObs = Instantiate(obstaclePrefeb, new Vector3(px, 540, 0), transform.rotation) as GameObject;
             newObs.transform.SetParent(GameObject.FindGameObjectWithTag("obs").transform, false);
-
-            // float px = Random.Range(-6, 7);
-            //newObs.transform.position= new Vector3(px, px, px);
         }
 
     }
