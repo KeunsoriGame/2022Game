@@ -34,8 +34,11 @@ public class PlayerController : MonoBehaviour
         {
             other.gameObject.SetActive(false);
 
-            Debug.Log("충돌");
-            Destroy(other.gameObject);
+            Time.timeScale = 0;
+            Debug.Log("Game Over");
+
+            //Debug.Log("충돌");
+            //Destroy(other.gameObject);
         }
     }
 }
