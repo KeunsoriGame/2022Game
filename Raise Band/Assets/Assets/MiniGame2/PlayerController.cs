@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public GameObject gameover;
 
     void Start()
     {
@@ -33,9 +34,10 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.tag == "obstacle")
         {
             other.gameObject.SetActive(false);
-
+            gameover.gameObject.SetActive(true);
             Time.timeScale = 0;
             Debug.Log("Game Over");
+
 
             //Debug.Log("Ãæµ¹");
             //Destroy(other.gameObject);
