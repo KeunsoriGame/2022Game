@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\MiniGame1\RandomSpawn.cs" />
+    <Compile Include="Assets\Scripts\MiniGame1\JudgeCommand.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
