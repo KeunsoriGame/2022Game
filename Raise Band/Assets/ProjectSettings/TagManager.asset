@@ -4,9 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - obs
   - obstacle
   - StageClearIMG
+  - Falling
+  - item
   layers:
   - Default
   - TransparentFX
