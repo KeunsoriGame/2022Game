@@ -10,6 +10,10 @@ public class RandomSpawn : MonoBehaviour
     Vector2 creatPoint;
     int[] SpawnObj = new int[6];
 
+    void Start()
+    {
+        Spawn();
+    }
     void Update()
     {
         SpawnPlay();
@@ -28,44 +32,46 @@ public class RandomSpawn : MonoBehaviour
 
             if (SpawnObj[i] == 1)
             {
-                Instantiate(A, creatPoint, Quaternion.identity, GameObject.Find("Canvas/Prefab").transform);
+                Instantiate(A, creatPoint, Quaternion.identity, GameObject.Find("Canvas").transform);
                 creatPoint.x += 100f;
             }
 
             else if (SpawnObj[i] == 2)
             {
-                Instantiate(B, creatPoint, Quaternion.identity, GameObject.Find("Canvas/Prefab").transform);
+                Instantiate(B, creatPoint, Quaternion.identity, GameObject.Find("Canvas").transform);
                 creatPoint.x += 100f;
             }
 
             else if (SpawnObj[i] == 3)
             {
-                Instantiate(C, creatPoint, Quaternion.identity, GameObject.Find("Canvas/Prefab").transform);
+                Instantiate(C, creatPoint, Quaternion.identity, GameObject.Find("Canvas").transform);
                 creatPoint.x += 100f;
             }
 
             else if (SpawnObj[i] == 4)
             {
-                Instantiate(D, creatPoint, Quaternion.identity, GameObject.Find("Canvas/Prefab").transform);
+                Instantiate(D, creatPoint, Quaternion.identity, GameObject.Find("Canvas").transform);
                 creatPoint.x += 100f;
             }
 
             else if (SpawnObj[i] == 5)
             {
-                Instantiate(E, creatPoint, Quaternion.identity, GameObject.Find("Canvas/Prefab").transform);
+                Instantiate(E, creatPoint, Quaternion.identity, GameObject.Find("Canvas").transform);
                 creatPoint.x += 100f;
             }
 
             else
             {
-                Instantiate(F, creatPoint, Quaternion.identity, GameObject.Find("Canvas/Prefab").transform);
+                Instantiate(F, creatPoint, Quaternion.identity, GameObject.Find("Canvas").transform);
                 creatPoint.x += 100f;
             }
         }
     }
     void SpawnPlay()
     {
-        if (!(GameObject.FindWithTag("TagA") || GameObject.FindWithTag("TagB") || GameObject.FindWithTag("TagC") || GameObject.FindWithTag("TagD") || GameObject.FindWithTag("TagE") || GameObject.FindWithTag("TagF")))
+        bool keydown = Input.GetKeyDown(KeyCode.Space);
+        
+        if (keydown)
         {
             Spawn();
         }
